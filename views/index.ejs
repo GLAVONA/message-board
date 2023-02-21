@@ -2,10 +2,15 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <a href="/new">New Message</a>
+    <% messages.forEach(message=>{%>
+    <h1><%=message.user%>: <%=message.text%></h1>
+    <h3>Time: <%=message.added%></h3>
+    <%}) %>
   </body>
 </html>
